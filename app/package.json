@@ -26,7 +26,7 @@
     "@evidence-dev/snowflake": "^1.0.1",
     "@evidence-dev/sqlite": "^2.0.1",
     "@evidence-dev/trino": "^1.0.1",
-    "@msrascal/evidence-shadcn": "file:../plugin"
+    "@evidence-dev/shadcn-components": "file:../plugin"
   },
   "overrides": {
     "jsonwebtoken": "9.0.0",

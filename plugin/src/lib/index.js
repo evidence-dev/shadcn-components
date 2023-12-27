@@ -1,2 +1,2 @@
 // Reexport your entry components here
-export {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from './components/ui/accordion'
+export * from './user-facing/index.js';

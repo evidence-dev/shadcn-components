@@ -5,8 +5,11 @@ components:
   "@evidence-dev/core-components": {}
   "@evidence-dev/shadcn-components":
     overrides:
+      - Tabs
+      - Tab
       - Accordion
       - AccordionItem
+
 
   # Loading a plugin:
   # your-component-plugin: {}

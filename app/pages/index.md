@@ -20,3 +20,16 @@ This includes some markdown things like `code` and lists:
 </Accordion>
 
 Qui mollit laboris laborum laborum reprehenderit irure ex mollit. Sunt ex aute consectetur dolore aliquip deserunt ea. Consectetur do ipsum irure duis laborum officia Lorem irure magna Lorem officia qui esse. Laborum ipsum commodo officia labore occaecat enim duis consequat tempor esse aliqua nulla cupidatat sit.
+
+# Tabs
+
+<Tabs>
+  <Tab title="Bare Content">
+    Some content 
+  </Tab> 
+  <Tab title=Markdown>
+
+Some **markdown** content
+
+  </Tab>
+</Tabs>

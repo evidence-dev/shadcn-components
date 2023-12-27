@@ -1,6 +1,6 @@
 components:
   - Accordion
-  - AccordionContent
   - AccordionItem
-  - AccordionTrigger
+  - Tabs 
+  - Tab
   

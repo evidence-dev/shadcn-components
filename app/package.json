@@ -25,11 +25,13 @@
     "@evidence-dev/postgres": "^1.0.1",
     "@evidence-dev/snowflake": "^1.0.1",
     "@evidence-dev/sqlite": "^2.0.1",
-    "@evidence-dev/trino": "^1.0.1"
+    "@evidence-dev/trino": "^1.0.1",
+    "@msrascal/evidence-shadcn": "file:../plugin"
   },
   "overrides": {
     "jsonwebtoken": "9.0.0",
     "trim@<0.0.3": ">0.0.3",
-    "sqlite3": "5.1.5"
+    "sqlite3": "5.1.5",
+    "svelte": "3.56.0"
   }
 }

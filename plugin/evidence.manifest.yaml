@@ -1,0 +1,6 @@
+components:
+  - Accordion
+  - AccordionContent
+  - AccordionItem
+  - AccordionTrigger
+  

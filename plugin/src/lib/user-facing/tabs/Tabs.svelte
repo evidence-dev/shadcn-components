@@ -12,7 +12,7 @@
 	setContext('TAB_REGISTRATION', tabItems);
 </script>
 
-<BaseTabs.Root class="w-[400px]">
+<BaseTabs.Root>
 	<BaseTabs.List {style} {color}>
 		{#each $tabItems as value}
 			<BaseTabs.Trigger {value}>{value}</BaseTabs.Trigger>

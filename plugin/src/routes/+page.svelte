@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Accordian from '$lib/user-facing/accordion/Accordion.svelte';
-	import AccordianItem from '$lib/user-facing/accordion/AccordianItem.svelte';
+	import AccordianItem from '$lib/user-facing/accordion/AccordionItem.svelte';
 </script>
 
 <Accordian>

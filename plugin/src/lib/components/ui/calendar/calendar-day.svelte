@@ -20,7 +20,7 @@
 		buttonVariants({ variant: 'ghost' }),
 		'h-8 w-8 p-0 font-normal',
 		// Today
-		'[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-accent-foreground',
+		'[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-gray-900',
 		// Selected
 		'data-[selected]:bg-primary data-[selected]:hover:bg-primary data-[selected]:focus:bg-primary data-[selected]:text-white data-[selected]:opacity-100 data-[selected]:hover:text-white data-[selected]:focus:text-white',
 		// Disabled

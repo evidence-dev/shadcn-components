@@ -20,7 +20,7 @@
 		buttonVariants({ variant: 'ghost' }),
 		'h-8 w-8 p-0 font-normal data-[selected]:opacity-100',
 		// Today
-		'[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-accent-foreground',
+		'[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-gray-900',
 		// Selection Start
 		'data-[selection-start]:bg-primary data-[selection-start]:hover:bg-primary data-[selection-start]:focus:bg-primary data-[selection-start]:text-white data-[selection-start]:hover:text-white data-[selection-start]:focus:text-white',
 		// Selection End

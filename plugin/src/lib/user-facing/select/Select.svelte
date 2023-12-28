@@ -1,81 +1,96 @@
 <script lang="ts">
-	import { Check, CaretSort } from 'radix-icons-svelte';
+	import { PlusCircled, Check } from 'radix-icons-svelte';
 	import * as Command from '$lib/components/ui/command';
 	import * as Popover from '$lib/components/ui/popover';
 	import { Button } from '$lib/components/ui/button';
 	import { cn } from '$lib/utils';
-	import { tick } from 'svelte';
+	import Separator from '$lib/components/ui/separator/separator.svelte';
+	import Badge from '$lib/components/ui/badge/badge.svelte';
+	// import type { statuses } from "../(data)/data";
 
-	const frameworks = [
-		{
-			value: 'sveltekit',
-			label: 'SvelteKit'
-		},
-		{
-			value: 'next.js',
-			label: 'Next.js'
-		},
-		{
-			value: 'nuxt.js',
-			label: 'Nuxt.js'
-		},
-		{
-			value: 'remix',
-			label: 'Remix'
-		},
-		{
-			value: 'astro',
-			label: 'Astro'
-		}
-	];
+	export let filterValues: string[] = [];
+	export let title: string;
+	export let options = [];
 
 	let open = false;
-	let value = '';
 
-	$: selectedValue = frameworks.find((f) => f.value === value)?.label ?? 'Select a framework...';
-
-	// We want to refocus the trigger button when the user selects
-	// an item from the list so users can continue navigating the
-	// rest of the form with the keyboard.
-	function closeAndFocusTrigger(triggerId: string) {
-		open = false;
-		tick().then(() => {
-			document.getElementById(triggerId)?.focus();
-		});
-	}
+	const handleSelect = (currentValue: string) => {
+		if (Array.isArray(filterValues) && filterValues.includes(currentValue)) {
+			filterValues = filterValues.filter((v) => v !== currentValue);
+		} else {
+			filterValues = [...(Array.isArray(filterValues) ? filterValues : []), currentValue];
+		}
+	};
 </script>
 
-<Popover.Root bind:open let:ids>
+<Popover.Root bind:open>
 	<Popover.Trigger asChild let:builder>
-		<Button
-			builders={[builder]}
-			variant="outline"
-			role="combobox"
-			aria-expanded={open}
-			class="w-[200px] justify-between"
-		>
-			{selectedValue}
-			<CaretSort class="ml-2 h-4 w-4 shrink-0 opacity-50" />
+		<Button builders={[builder]} variant="outline" size="sm" class="h-8 border">
+			<PlusCircled class="mr-2 h-4 w-4" />
+			{title}
+
+			{#if filterValues.length > 0}
+				<Separator orientation="vertical" class="mx-2 h-4" />
+				<Badge variant="secondary" class="rounded-sm px-1 font-normal lg:hidden">
+					{filterValues.length}
+				</Badge>
+				<div class="hidden space-x-1 lg:flex">
+					{#if filterValues.length > 2}
+						<Badge variant="secondary" class="rounded-sm px-1 font-normal">
+							{filterValues.length} Selected
+						</Badge>
+					{:else}
+						{#each filterValues as option}
+							<Badge variant="secondary" class="rounded-sm px-1 font-normal">
+								{option}
+							</Badge>
+						{/each}
+					{/if}
+				</div>
+			{/if}
 		</Button>
 	</Popover.Trigger>
-	<Popover.Content class="w-[200px] p-0">
+	<Popover.Content class="w-[200px] p-0" align="start" side="bottom">
 		<Command.Root>
-			<Command.Input placeholder="Search framework..." class="h-9" />
-			<Command.Empty>No framework found.</Command.Empty>
-			<Command.Group>
-				{#each frameworks as framework}
+			<Command.Input placeholder={title} />
+			<Command.List>
+				<Command.Empty>No results found.</Command.Empty>
+				<Command.Group>
+					{#each options as option}
+						<Command.Item
+							value={option.value}
+							onSelect={(currentValue) => {
+								handleSelect(currentValue);
+							}}
+						>
+							<div
+								class={cn(
+									'border-primary mr-2 flex h-4 w-4 items-center justify-center rounded-sm border',
+									filterValues.includes(option.value)
+										? 'bg-primary text-gray-50'
+										: 'opacity-50 [&_svg]:invisible'
+								)}
+							>
+								<Check className={cn('h-4 w-4')} />
+							</div>
+							<span>
+								{option.label}
+							</span>
+						</Command.Item>
+					{/each}
+				</Command.Group>
+				{#if filterValues.length > 0}
+					<Command.Separator />
 					<Command.Item
-						value={framework.value}
-						onSelect={(currentValue) => {
-							value = currentValue;
-							closeAndFocusTrigger(ids.trigger);
+						class="justify-center text-center"
+						onSelect={() => {
+							filterValues = [];
 						}}
 					>
-						<Check class={cn('mr-2 h-4 w-4', value !== framework.value && 'text-transparent')} />
-						{framework.label}
+						Clear selection
 					</Command.Item>
-				{/each}
-			</Command.Group>
+				{/if}
+			</Command.List>
 		</Command.Root>
 	</Popover.Content>
 </Popover.Root>

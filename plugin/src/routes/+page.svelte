@@ -4,6 +4,29 @@
 	import Tabs from '$lib/user-facing/tabs/Tabs.svelte';
 	import Tab from '$lib/user-facing/tabs/Tab.svelte';
 	import Select from '$lib/user-facing/select/Select.svelte';
+
+	const statuses = [
+		{
+			value: 'backlog',
+			label: 'Backlog'
+		},
+		{
+			value: 'todo',
+			label: 'Todo'
+		},
+		{
+			value: 'in progress',
+			label: 'In Progress'
+		},
+		{
+			value: 'done',
+			label: 'Done'
+		},
+		{
+			value: 'canceled',
+			label: 'Canceled'
+		}
+	];
 </script>
 
 <Accordian>
@@ -17,4 +40,6 @@
 	<Tab title="Preview">Content!</Tab>
 </Tabs>
 
-<Select />
+<div class="mt-10">
+	<Select title="Category" options={statuses} />
+</div>

@@ -1,5 +1,5 @@
 <script>
-	import * as BaseAccordion from '$lib/components/shadcn/accordion';
+	import * as BaseAccordion from '$lib/components/ui/accordion';
 </script>
 
 <BaseAccordion.Root class="mb-6 w-full">

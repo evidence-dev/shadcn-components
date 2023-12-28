@@ -1,5 +1,5 @@
 <script>
-	import * as BaseAccordion from '$lib/components/shadcn/accordion';
+	import * as BaseAccordion from '$lib/components/ui/accordion';
 	export let title = '';
 </script>
 

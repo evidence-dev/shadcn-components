@@ -1,5 +1,5 @@
 <script>
-	import * as BaseTabs from '$lib/components/shadcn/tabs';
+	import * as BaseTabs from '$lib/components/ui/tabs';
 
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';

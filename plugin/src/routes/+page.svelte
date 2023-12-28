@@ -3,6 +3,7 @@
 	import AccordianItem from '$lib/user-facing/accordion/AccordionItem.svelte';
 	import Tabs from '$lib/user-facing/tabs/Tabs.svelte';
 	import Tab from '$lib/user-facing/tabs/Tab.svelte';
+	import Select from '$lib/user-facing/select/Select.svelte';
 </script>
 
 <Accordian>
@@ -15,3 +16,5 @@
 	<Tab title="Dark Mode">Dark</Tab>
 	<Tab title="Preview">Content!</Tab>
 </Tabs>
+
+<Select />

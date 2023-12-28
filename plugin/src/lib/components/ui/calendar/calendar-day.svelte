@@ -22,7 +22,7 @@
 		// Today
 		'[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-gray-900',
 		// Selected
-		'data-[selected]:bg-primary data-[selected]:hover:bg-primary data-[selected]:focus:bg-primary data-[selected]:text-white data-[selected]:opacity-100 data-[selected]:hover:text-white data-[selected]:focus:text-white',
+		'data-[selected]:bg-gray-900 data-[selected]:text-white data-[selected]:opacity-100 data-[selected]:hover:bg-gray-900 data-[selected]:hover:text-white data-[selected]:focus:bg-gray-900 data-[selected]:focus:text-white',
 		// Disabled
 		'data-[disabled]:text-gray-500 data-[disabled]:opacity-50',
 		// Unavailable

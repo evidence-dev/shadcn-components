@@ -6,12 +6,12 @@ const buttonVariants = tv({
 	base: 'inline-flex items-center justify-center rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50',
 	variants: {
 		variant: {
-			default: 'bg-primary text-white shadow hover:bg-primary/90',
+			default: 'bg-gray-900 text-white shadow hover:bg-gray-900/90',
 			destructive: 'bg-destructive text-red-50 shadow-sm hover:bg-destructive/90',
 			outline: 'border border-input bg-transparent shadow-sm hover:bg-accent hover:text-gray-900',
-			secondary: 'bg-secondary text-gray-900 shadow-sm hover:bg-secondary/80',
+			secondary: 'bg-gray-100 text-gray-900 shadow-sm hover:bg-gray-100/80',
 			ghost: 'hover:bg-accent hover:text-gray-900',
-			link: 'text-primary underline-offset-4 hover:underline'
+			link: 'text-gray-900 underline-offset-4 hover:underline'
 		},
 		size: {
 			default: 'h-9 px-4 py-2',

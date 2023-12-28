@@ -65,9 +65,9 @@
 						>
 							<div
 								class={cn(
-									'border-primary mr-2 flex h-4 w-4 items-center justify-center rounded-sm border',
+									'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-gray-900',
 									filterValues.includes(option.value)
-										? 'bg-primary text-gray-50'
+										? 'bg-gray-900 text-gray-50'
 										: 'opacity-50 [&_svg]:invisible'
 								)}
 							>

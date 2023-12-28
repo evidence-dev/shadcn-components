@@ -11,7 +11,7 @@
 
 <MenubarPrimitive.Trigger
 	class={cn(
-		'focus:bg-accent data-[state=open]:bg-accent flex cursor-default select-none items-center rounded-sm px-3 py-1 text-sm font-medium outline-none focus:text-gray-900 data-[state=open]:text-gray-900',
+		'flex cursor-default select-none items-center rounded-sm px-3 py-1 text-sm font-medium outline-none focus:bg-gray-100 focus:text-gray-900 data-[state=open]:bg-gray-100 data-[state=open]:text-gray-900',
 		className
 	)}
 	{...$$restProps}

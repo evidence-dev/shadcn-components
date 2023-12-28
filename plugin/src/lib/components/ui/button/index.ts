@@ -8,9 +8,9 @@ const buttonVariants = tv({
 		variant: {
 			default: 'bg-gray-900 text-white shadow hover:bg-gray-900/90',
 			destructive: 'bg-destructive text-red-50 shadow-sm hover:bg-destructive/90',
-			outline: 'border border-input bg-transparent shadow-sm hover:bg-accent hover:text-gray-900',
+			outline: 'border border-input bg-transparent shadow-sm hover:bg-gray-100 hover:text-gray-900',
 			secondary: 'bg-gray-100 text-gray-900 shadow-sm hover:bg-gray-100/80',
-			ghost: 'hover:bg-accent hover:text-gray-900',
+			ghost: 'hover:bg-gray-100 hover:text-gray-900',
 			link: 'text-gray-900 underline-offset-4 hover:underline'
 		},
 		size: {

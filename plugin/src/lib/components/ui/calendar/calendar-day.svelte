@@ -26,7 +26,7 @@
 		// Disabled
 		'data-[disabled]:text-gray-500 data-[disabled]:opacity-50',
 		// Unavailable
-		'data-[unavailable]:text-destructive-foreground data-[unavailable]:line-through',
+		'data-[unavailable]:text-red-50 data-[unavailable]:line-through',
 		// Outside months
 		'[&[data-outside-month][data-selected]]:bg-accent/50 data-[outside-month]:pointer-events-none data-[outside-month]:text-gray-500 data-[outside-month]:opacity-50 [&[data-outside-month][data-selected]]:text-gray-500 [&[data-outside-month][data-selected]]:opacity-30',
 		className

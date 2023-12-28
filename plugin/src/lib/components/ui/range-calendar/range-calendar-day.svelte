@@ -30,7 +30,7 @@
 		// Disabled
 		'data-[disabled]:text-gray-500 data-[disabled]:opacity-50',
 		// Unavailable
-		'data-[unavailable]:text-destructive-foreground data-[unavailable]:line-through',
+		'data-[unavailable]:text-red-50 data-[unavailable]:line-through',
 		className
 	)}
 	{...$$restProps}

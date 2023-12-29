@@ -6,6 +6,8 @@
 
 ## Multi Select
 
+<Select title="Category" />
+
 # Accordion
 
 Qui mollit laboris laborum laborum reprehenderit irure ex mollit. Sunt ex aute consectetur dolore aliquip deserunt ea. Consectetur do ipsum irure duis laborum officia Lorem irure magna Lorem officia qui esse. Laborum ipsum commodo officia labore occaecat enim duis consequat tempor esse aliqua nulla cupidatat sit.

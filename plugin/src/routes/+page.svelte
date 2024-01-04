@@ -4,6 +4,7 @@
 	import Tabs from '$lib/user-facing/tabs/Tabs.svelte';
 	import Tab from '$lib/user-facing/tabs/Tab.svelte';
 	import Select from '$lib/user-facing/select/Select.svelte';
+	import DateRange from '$lib/user-facing/date-range/DateRange.svelte';
 
 	const statuses = [
 		{
@@ -40,6 +41,11 @@
 	<Tab title="Preview">Content!</Tab>
 </Tabs>
 
-<div class="mt-10">
-	<Select title="Category" options={statuses} />
-</div>
+<h1 class="text-lg font-medium">Single Select</h1>
+<Select title="Category" options={statuses} />
+
+<h1 class="text-lg font-medium">Multi Select</h1>
+<Select title="Category" options={statuses} multiple />
+
+<h1 class="text-lg font-medium">Date Range</h1>
+<DateRange />

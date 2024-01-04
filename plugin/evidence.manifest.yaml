@@ -4,4 +4,4 @@ components:
   - Tabs 
   - Tab
   - Select 
-  
+  - DateRange

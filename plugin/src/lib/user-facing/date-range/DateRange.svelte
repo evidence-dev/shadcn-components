@@ -18,8 +18,12 @@
 	import * as Select from '$lib/components/ui/select';
 	import * as Popover from '$lib/components/ui/popover';
 
-	const df = new DateFormatter('en-US', {
+	const dfMedium = new DateFormatter('en-US', {
 		dateStyle: 'medium'
+	});
+
+	const dfShort = new DateFormatter('en-US', {
+		dateStyle: 'short'
 	});
 
 	let selectedDateRange: DateRange | undefined = {
@@ -27,7 +31,7 @@
 		end: today(getLocalTimeZone())
 	};
 
-	let startValue: DateValue | undefined = undefined;
+	let startValue: DateValue | undefined = selectedDateRange.start;
 
 	type Preset = {
 		label: string;
@@ -50,52 +54,90 @@
 			}
 		}
 	];
+
+	let selectedPreset: Preset | undefined = undefined;
 </script>
 
-<Popover.Root openFocus>
-	<Popover.Trigger asChild let:builder>
-		<Button
-			variant="outline"
-			class={cn(
-				'justify-start text-left font-normal',
-				!selectedDateRange && 'text-muted-foreground'
-			)}
-			builders={[builder]}
-		>
-			<CalendarIcon class="mr-2 h-4 w-4" />
-			{#if selectedDateRange && selectedDateRange.start}
-				{#if selectedDateRange.end}
-					{df.format(selectedDateRange.start.toDate(getLocalTimeZone()))} - {df.format(
-						selectedDateRange.end.toDate(getLocalTimeZone())
-					)}
-				{:else}
-					{df.format(selectedDateRange.start.toDate(getLocalTimeZone()))}
-				{/if}
-			{:else if startValue}
-				{df.format(startValue.toDate(getLocalTimeZone()))}
+<div class="flex">
+	<Popover.Root openFocus>
+		<Popover.Trigger asChild let:builder>
+			<Button
+				variant="outline"
+				class={cn(
+					'justify-start rounded-r-none border-r-0 text-left text-xs font-normal sm:w-64',
+					!selectedDateRange && 'text-gray-400'
+				)}
+				builders={[builder]}
+			>
+				<CalendarIcon class="mr-2 h-4 w-4" />
+				<span class="hidden sm:inline">
+					{#if selectedDateRange && selectedDateRange.start}
+						{#if selectedDateRange.end}
+							{dfMedium.format(selectedDateRange.start.toDate(getLocalTimeZone()))} - {dfMedium.format(
+								selectedDateRange.end.toDate(getLocalTimeZone())
+							)}
+						{:else}
+							{dfMedium.format(selectedDateRange.start.toDate(getLocalTimeZone()))}
+						{/if}
+					{:else if startValue}
+						{dfMedium.format(startValue.toDate(getLocalTimeZone()))}
+					{:else}
+						Date Range
+					{/if}
+				</span>
+				<span class="sm:hidden">
+					{#if selectedDateRange && selectedDateRange.start}
+						{#if selectedDateRange.end}
+							{dfShort.format(selectedDateRange.start.toDate(getLocalTimeZone()))} - {dfShort.format(
+								selectedDateRange.end.toDate(getLocalTimeZone())
+							)}
+						{:else}
+							{dfShort.format(selectedDateRange.start.toDate(getLocalTimeZone()))}
+						{/if}
+					{:else if startValue}
+						{dfShort.format(startValue.toDate(getLocalTimeZone()))}
+					{:else}
+						Date Range
+					{/if}
+				</span>
+			</Button>
+		</Popover.Trigger>
+		<Popover.Content class="w-auto select-none p-0" align="start">
+			<RangeCalendar
+				bind:value={selectedDateRange}
+				placeholder={startValue}
+				initialFocus
+				numberOfMonths={1}
+				onValueChange={() => {
+					selectedPreset = undefined;
+				}}
+			/>
+		</Popover.Content>
+	</Popover.Root>
+
+	<Select.Root
+		onSelectedChange={(v) => {
+			if (!v) return;
+			selectedDateRange = presets.filter((presets) => presets.label == v.label)[0].range;
+			selectedPreset = v;
+		}}
+		bind:selected={selectedPreset}
+	>
+		<Select.Trigger class="w-44 rounded-l-none" sameWidth>
+			{#if selectedPreset}
+				{selectedPreset.label}
 			{:else}
-				Date Range
+				<span class="hidden sm:inline"> Select a Range </span>
+				<span class="sm:hidden"> Range </span>
 			{/if}
-		</Button>
-	</Popover.Trigger>
-	<Popover.Content class="w-auto select-none p-2" align="start">
-		<Select.Root
-			onSelectedChange={(v) => {
-				if (!v) return;
-				// console.log(presets.filter((presets) => presets.label == v.value)[0].range);
-				// console.log(selectedDateRange);
-				selectedDateRange = presets.filter((presets) => presets.label == v.value.label)[0].range;
-			}}
-		>
-			<Select.Trigger>
-				<Select.Value placeholder="Select" />
-			</Select.Trigger>
-			<Select.Content>
+		</Select.Trigger>
+		<Select.Content>
+			<Select.Group>
+				<!-- <Select.Label>Presets</Select.Label> -->
 				{#each presets as preset}
-					<Select.Item value={preset}>{preset.label}</Select.Item>
+					<Select.Item value={preset.range} label={preset.label}>{preset.label}</Select.Item>
 				{/each}
-			</Select.Content>
-		</Select.Root>
-		<RangeCalendar bind:value={selectedDateRange} initialFocus numberOfMonths={1} />
-	</Popover.Content>
-</Popover.Root>
+			</Select.Group>
+		</Select.Content>
+	</Select.Root>
+</div>

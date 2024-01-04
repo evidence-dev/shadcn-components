@@ -65,7 +65,7 @@
 				variant="outline"
 				size="sm"
 				class={cn(
-					'justify-start rounded-r-none border-r-0 text-left font-normal sm:w-64',
+					'flex justify-start rounded-r-none border-r-0 text-left font-normal',
 					!selectedDateRange && 'text-gray-400'
 				)}
 				builders={[builder]}
@@ -124,7 +124,7 @@
 		}}
 		bind:selected={selectedPreset}
 	>
-		<Select.Trigger class="rounded-l-none h-8 px-3 text-xs" sameWidth>
+		<Select.Trigger class="w-40 rounded-l-none h-8 px-3 text-xs" sameWidth>
 			{#if selectedPreset}
 				{selectedPreset.label}
 			{:else}

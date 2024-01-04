@@ -124,7 +124,7 @@
 		}}
 		bind:selected={selectedPreset}
 	>
-		<Select.Trigger class="w-44 rounded-l-none h-8 px-3 text-xs" sameWidth>
+		<Select.Trigger class="rounded-l-none h-8 px-3 text-xs" sameWidth>
 			{#if selectedPreset}
 				{selectedPreset.label}
 			{:else}

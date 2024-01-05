@@ -5,6 +5,7 @@
 	import Tab from '$lib/user-facing/tabs/Tab.svelte';
 	import Select from '$lib/user-facing/select/Select.svelte';
 	import DateRange from '$lib/user-facing/date-range/DateRange.svelte';
+	import DateToggle from '$lib/user-facing/date-toggle/DateToggle.svelte';
 
 	const statuses = [
 		{
@@ -49,3 +50,6 @@
 
 <h1 class="text-lg font-medium">Date Range</h1>
 <DateRange />
+
+<h1 class="text-lg font-medium">Date Toggle</h1>
+<DateToggle />

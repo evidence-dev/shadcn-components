@@ -134,7 +134,6 @@
 		</Select.Trigger>
 		<Select.Content>
 			<Select.Group>
-				<!-- <Select.Label>Presets</Select.Label> -->
 				{#each presets as preset}
 					<Select.Item value={preset.range} label={preset.label}>{preset.label}</Select.Item>
 				{/each}

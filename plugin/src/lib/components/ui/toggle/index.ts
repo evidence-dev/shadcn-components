@@ -6,7 +6,8 @@ export const toggleVariants = tv({
 	variants: {
 		variant: {
 			default: 'bg-transparent',
-			outline: 'border border-input bg-transparent shadow-sm hover:bg-gray-100 hover:text-gray-900'
+			outline:
+				'border border-gray-200 bg-transparent shadow-sm hover:bg-gray-100 hover:text-gray-900'
 		},
 		size: {
 			default: 'h-9 px-3',

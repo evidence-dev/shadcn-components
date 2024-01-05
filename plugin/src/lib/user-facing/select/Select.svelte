@@ -16,35 +16,35 @@
 	let options = [
 		{
 			label: 'Open',
-			value: 'open'
+			value: 'Open'
 		},
 		{
 			label: 'Closed',
-			value: 'closed'
+			value: 'Closed'
 		},
 		{
 			label: 'Draft',
-			value: 'draft'
+			value: 'Draft'
 		},
 		{
 			label: 'Pending',
-			value: 'pending'
+			value: 'Pending'
 		},
 		{
 			label: 'Scheduled',
-			value: 'scheduled'
+			value: 'Scheduled'
 		},
 		{
 			label: 'Published',
-			value: 'published'
+			value: 'Published'
 		},
 		{
 			label: 'Archived',
-			value: 'archived'
+			value: 'Archived'
 		},
 		{
 			label: 'Deleted',
-			value: 'deleted'
+			value: 'Deleted'
 		}
 	];
 
@@ -57,6 +57,8 @@
 			document.getElementById(triggerId)?.focus();
 		});
 	}
+
+	// todo: this is pushing the values, not the labels into selected values
 
 	function handleSelect(currentValue: string, triggerId: string) {
 		if (!multiple) {

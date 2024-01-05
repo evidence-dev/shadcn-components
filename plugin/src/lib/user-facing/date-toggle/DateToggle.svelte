@@ -4,7 +4,6 @@
 	const presets = [
 		{
 			label: '1D',
-
 			value: '1D'
 		},
 		{
@@ -46,18 +45,20 @@
 		{
 			label: '10Y',
 			value: '10Y'
-		},
-		{
-			label: 'All',
-			value: 'All'
 		}
 	];
 </script>
 
-<ToggleGroup.Root type="single" size="sm" class="my-4 justify-between overflow-auto border-t p-1">
+<ToggleGroup.Root
+	type="single"
+	size="sm"
+	class="mb-2 mt-4 justify-between overflow-auto border-t p-1"
+>
 	{#each presets as preset}
 		<ToggleGroup.Item value={preset.value} aria-label={preset.label}>
-			{preset.label}
+			<span>
+				{preset.label}
+			</span>
 		</ToggleGroup.Item>
 	{/each}
 </ToggleGroup.Root>

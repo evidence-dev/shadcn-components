@@ -5,3 +5,5 @@ components:
   - Tab
   - Select 
   - DateRange
+  - DateToggle
+  - Modal

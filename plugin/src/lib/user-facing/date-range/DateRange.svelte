@@ -124,7 +124,7 @@
 		}}
 		bind:selected={selectedPreset}
 	>
-		<Select.Trigger class="w-40 rounded-l-none h-8 px-3 text-xs" sameWidth>
+		<Select.Trigger class="h-8 w-40 rounded-l-none px-3 text-xs font-medium" sameWidth>
 			{#if selectedPreset}
 				{selectedPreset.label}
 			{:else}
@@ -133,11 +133,11 @@
 			{/if}
 		</Select.Trigger>
 		<Select.Content>
-			<Select.Group>
-				{#each presets as preset}
-					<Select.Item value={preset.range} label={preset.label}>{preset.label}</Select.Item>
-				{/each}
-			</Select.Group>
+			{#each presets as preset}
+				<Select.Item value={preset.range} label={preset.label} class="text-xs"
+					>{preset.label}</Select.Item
+				>
+			{/each}
 		</Select.Content>
 	</Select.Root>
 </div>

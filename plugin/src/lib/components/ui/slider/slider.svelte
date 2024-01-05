@@ -18,6 +18,6 @@
 		<SliderPrimitive.Range class="absolute h-full bg-gray-900" />
 	</span>
 	<SliderPrimitive.Thumb
-		class="bg-background block h-4 w-4 rounded-full border border-gray-900/50 shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50"
+		class="block h-4 w-4 rounded-full border border-gray-900/50 bg-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50"
 	/>
 </SliderPrimitive.Root>

@@ -38,8 +38,8 @@
 </Accordian>
 
 <Tabs style="well">
-	<Tab title="Monthly">monthly</Tab>
-	<Tab title="Weekly">weekly</Tab>
+	<Tab label="Monthly">monthly</Tab>
+	<Tab label="Weekly">weekly</Tab>
 </Tabs>
 
 <h1 class="text-lg font-medium">Single Select</h1>
@@ -59,7 +59,7 @@
 
 <h1 class="text-lg font-medium">Tabs (Underline)</h1>
 <Tabs style="underline">
-	<Tab title="Light Mode">Light Mode</Tab>
-	<Tab title="Dark Mode">Dark</Tab>
-	<Tab title="Preview">Content!</Tab>
+	<Tab label="Light Mode">Light Mode</Tab>
+	<Tab label="Dark Mode">Dark</Tab>
+	<Tab label="Preview">Content!</Tab>
 </Tabs>

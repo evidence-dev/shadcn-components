@@ -37,10 +37,9 @@
 	<AccordianItem title="Disclaimers">Watch out</AccordianItem>
 </Accordian>
 
-<Tabs>
-	<Tab title="Light Mode">Light Mode</Tab>
-	<Tab title="Dark Mode">Dark</Tab>
-	<Tab title="Preview">Content!</Tab>
+<Tabs style="well">
+	<Tab title="Monthly">monthly</Tab>
+	<Tab title="Weekly">weekly</Tab>
 </Tabs>
 
 <h1 class="text-lg font-medium">Single Select</h1>
@@ -55,5 +54,12 @@
 <h1 class="text-lg font-medium">Date Toggle</h1>
 <DateToggle />
 
-<h1 class="text-lg font-medium">Date Toggle</h1>
+<h1 class="text-lg font-medium">Modal</h1>
 <Modal buttonText="Open the modal!" title="Modal Title" />
+
+<h1 class="text-lg font-medium">Tabs (Underline)</h1>
+<Tabs style="underline">
+	<Tab title="Light Mode">Light Mode</Tab>
+	<Tab title="Dark Mode">Dark</Tab>
+	<Tab title="Preview">Content!</Tab>
+</Tabs>

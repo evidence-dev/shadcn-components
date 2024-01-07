@@ -7,7 +7,7 @@
 	let tabItems = writable([]);
 
 	export let color;
-	export let style = 'well';
+	export let style;
 
 	setContext('TAB_REGISTRATION', tabItems);
 </script>
@@ -15,7 +15,7 @@
 <BaseTabs.Root>
 	<BaseTabs.List {style} {color}>
 		{#each $tabItems as value}
-			<BaseTabs.Trigger {value}>{value}</BaseTabs.Trigger>
+			<BaseTabs.Trigger {value} {style}>{value}</BaseTabs.Trigger>
 		{/each}
 	</BaseTabs.List>
 	<slot />

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "package-plugin": "",
-    "build": "npm --prefix ../plugin run package && evidence build",
+    "build": "evidence sources && evidence build",
     "build:strict": "evidence build:strict",
     "dev": "evidence dev --open /",
     "test": "evidence build",

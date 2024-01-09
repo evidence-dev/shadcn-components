@@ -10,11 +10,11 @@
 	<Dialog.Trigger class={buttonVariants({ variant: 'outline', size: 'sm' })}
 		>{buttonText ?? 'Open'}
 	</Dialog.Trigger>
-	<Dialog.Content>
+	<Dialog.Content class="fixed inset-8 mx-auto max-w-3xl">
 		<Dialog.Header>
 			<Dialog.Title>{title ?? ''}</Dialog.Title>
 		</Dialog.Header>
-		<div class="overflow-auto">
+		<div class=" overflow-auto">
 			<slot />
 		</div>
 	</Dialog.Content>

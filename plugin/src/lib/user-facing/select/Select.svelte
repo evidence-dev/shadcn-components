@@ -63,7 +63,7 @@
 	function handleSelect(currentValue: string, triggerId: string) {
 		if (!multiple) {
 			selectedValues = [currentValue];
-			closeAndFocusTrigger(triggerId);
+			// closeAndFocusTrigger(triggerId);
 		} else {
 			if (Array.isArray(selectedValues) && selectedValues.includes(currentValue)) {
 				selectedValues = selectedValues.filter((v) => v !== currentValue);

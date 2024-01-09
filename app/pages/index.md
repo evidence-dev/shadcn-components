@@ -49,10 +49,23 @@ Qui mollit laboris laborum laborum reprehenderit irure ex mollit. Sunt ex aute c
 # Tabs
 
 <Tabs>
-  <Tab title="Bare Content">
+  <Tab label="Bare Content">
     Some content 
   </Tab> 
-  <Tab title=Markdown>
+  <Tab label=Markdown>
+
+Some **markdown** content Anim sit eu consequat ex irure laboris Lorem veniam elit incididunt. Id quis Lorem ut ullamco consectetur. Laborum ullamco do laborum ullamco proident voluptate ullamco ipsum. Adipisicing est tempor culpa in duis incididunt anim adipisicing labore culpa velit. Irure qui labore pariatur esse quis. Cillum enim voluptate dolor nostrud et elit magna exercitation aliqua elit mollit sunt cupidatat.Anim sit eu consequat ex irure laboris Lorem veniam elit incididunt. Id quis Lorem ut ullamco consectetur. Laborum ullamco do laborum ullamco proident voluptate ullamco ipsum. Adipisicing est tempor culpa in duis incididunt anim adipisicing labore culpa velit. Irure qui labore pariatur esse quis. Cillum enim voluptate dolor nostrud et elit magna exercitation aliqua elit mollit sunt cupidatat.
+
+  </Tab>
+</Tabs>
+
+<Tabs style=well>
+  <Tab label="Monthly">
+    
+    Some content
+
+  </Tab> 
+  <Tab label=Weekly>
 
 Some **markdown** content Anim sit eu consequat ex irure laboris Lorem veniam elit incididunt. Id quis Lorem ut ullamco consectetur. Laborum ullamco do laborum ullamco proident voluptate ullamco ipsum. Adipisicing est tempor culpa in duis incididunt anim adipisicing labore culpa velit. Irure qui labore pariatur esse quis. Cillum enim voluptate dolor nostrud et elit magna exercitation aliqua elit mollit sunt cupidatat.Anim sit eu consequat ex irure laboris Lorem veniam elit incididunt. Id quis Lorem ut ullamco consectetur. Laborum ullamco do laborum ullamco proident voluptate ullamco ipsum. Adipisicing est tempor culpa in duis incididunt anim adipisicing labore culpa velit. Irure qui labore pariatur esse quis. Cillum enim voluptate dolor nostrud et elit magna exercitation aliqua elit mollit sunt cupidatat.
 

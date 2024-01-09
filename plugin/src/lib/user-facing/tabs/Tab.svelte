@@ -7,9 +7,11 @@
 
 	const tabs = getContext('TAB_REGISTRATION');
 
-	$tabs = [...$tabs, title];
+	$tabs = [...$tabs, label];
 </script>
 
 <BaseTabs.Content value={label} {style}>
-	<slot />
+	<div class="mb-4">
+		<slot />
+	</div>
 </BaseTabs.Content>
